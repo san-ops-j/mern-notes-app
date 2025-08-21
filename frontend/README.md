@@ -1,12 +1,99 @@
-# React + Vite
+# MERN Notes App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **Notes Management Application** built using the **MERN (MongoDB, Express.js, React, Node.js)** stack. The app allows users to create, view, update, and delete personal notes.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features  
+- User registration and login with JWT authentication  
+- Create, read, update, and delete notes  
+- Secure backend API using Express and MongoDB  
+- Interactive and responsive frontend using React  
+- Clean folder structure for scalability  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏗️ Tech Stack  
+- **Frontend**: React, Axios, CSS/Tailwind/Bootstrap (based on your choice)  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB (local or MongoDB Atlas)  
+- **Authentication**: JWT (JSON Web Tokens)  
+
+---
+
+## ⚙️ Installation and Setup  
+
+### 1. Clone Repository  
+
+git clone https://github.com/your-username/mern-notes-app.git
+cd mern-notes-app
+
+
+2. Backend Setup
+
+cd backend
+npm install
+
+Create .env file in the backend folder:
+
+PORT=5000
+MONGO_URI=your-mongodb-uri
+JWT_SECRET=your-secret-key
+
+Start backend server:
+npm start
+
+3. Frontend Setup:
+   
+cd frontend
+npm install
+npm start
+Backend will run on http://localhost:5000
+
+Frontend will run on http://localhost:3000
+
+📡 API Endpoints
+
+Method	Endpoint	Description
+POST	/api/auth/register	Register a new user
+POST	/api/auth/login	Authenticate user
+GET	/api/notes	Get all notes (per user)
+POST	/api/notes	Create a new note
+PUT	/api/notes/:id	Update a note
+DELETE	/api/notes/:id	Delete a note
+
+📂 Folder Structure
+
+mern-notes-app/
+│
+├── backend/         # Express server + MongoDB
+│   ├── models/      # Database schemas
+│   ├── routes/      # API routes
+│   ├── controllers/ # Business logic
+│   └── server.js    # Entry point
+│
+├── frontend/        # React client
+│   ├── src/
+│   │   ├── components/  
+│   │   ├── pages/  
+│   │   └── App.js
+│
+└── README.md
+
+📖 Usage
+
+Start backend (npm start inside backend folder).
+
+Start frontend (npm start inside frontend folder).
+
+Register or login to manage your notes.
+
+📌 Future Improvements
+
+Add search & filter functionality
+
+Add categories or tags for notes
+
+Add dark/light mode toggle
+
+Enable deployment (Vercel + Render + MongoDB Atlas)
